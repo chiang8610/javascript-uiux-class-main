@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let aaa = ['bii', 'alex', 'kiki', 'hook']
+        aaa[4] = 'kiki';
+
+        // aaa[2] = 'john';
+        // console.log(aaa[0]);
+        // console.log(aaa);
+
+        let ste = "";
+        for (let i = 0; i < 5; i++) {
+            // console.log(aaa[i])
+
+            if (ste == "") {
+                console.log(ste = aaa[i]);
+            }
+            else {
+
+
+                console.log(ste += ',' + aaa[i]);
+            }
+
+
+        }
+
+
+
+        let arr = ['a', 'b', 'c', 'd']
+        let str = "";
+        for (let i = 0; i < arr.length; i++) {
+            // == 有bool值功能  =就是等於額已
+
+            if (str == "") {
+                str = arr[i];
+            }
+            // +=印出字串 str = str + ","
+            else {
+                str += "," + arr[i];
+                //跑完第一圈str=a
+                //a+,+arr[i]=str
+            }
+            console.log(str);
+        }
+
+
+
+
+        for (let j = 0; j < 1; j++) {
+            console.log(aaa[j]);
+            for (k = 1; k < 5; k++) {
+                console.log(aaa[j] += ',' + aaa[k]);
+
+            }
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

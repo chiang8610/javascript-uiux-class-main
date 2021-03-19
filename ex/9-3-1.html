@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let aaa = {
+            fname: 'Darren',
+            lname: 'Yang',
+            age: null,
+            lineId: 'telunyang'
+        };
+
+        for (let attr in aaa) {
+            console.log(`${attr}`);
+        }
+        for (let attr in aaa) {
+            console.log(aaa[attr]);
+        }
+
+        console.log(aaa['age']);
+        // for (let key in aaa) {
+        //     console.log(`${key}`);
+        // }
+        // for (let value of bbb) {
+        //     console.log(`${value}`);
+        // }
+        //沒有順去概念，要0 1 2 3 才可使用
+
+        let bbb = [
+
+            'tfe', 'b', 'c'
+        ]
+
+        for (let key in bbb) {
+            console.log(`${key}`);
+        }
+
+        for (let value of bbb) {
+            console.log(`${value}`);
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="aaa" value="wow" onclick="bbb()">按我吧</button>
+
+    <!-- 老師版 -->
+    <button id="myBtn" value="Hi!" onclick="getValue()">按鈕</button>
+
+
+
+    <script>
+        function bbb() {
+            var btn = document.getElementById('aaa');
+            alert(btn.value);
+
+        }
+
+
+
+        //   老師版
+        function getValue() {
+            var btn = document.getElementById('myBtn');
+            alert(btn.value);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
