@@ -18,15 +18,17 @@
         console.log(aaa[0]);
         console.log(aaa[1][2]);
         console.log(aaa[2][0]);
-        console.log(aaa[3][2]);
+        console.log(aaa[3][2]);//沒此物件 找不到
 
 
         let bbb = ['john', 'kiki']
 
         let ccc = '人生好難'
 
-        if (bbb.indexOf('john') !== -1) {
+        if (bbb.indexOf('john') > -1) {
             console.log('找到');
+
+            alert('找到john')
 
         }
         else {

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str = `{
+        "firstName": "Darren",
+        "lastName": "Yang",
+        "gender": "male",
+        "test": "ture",
+        "age": 18,
+        "address": {
+            "streetAddress": "台北市復興南路一段390號2樓、3樓",
+            "type": "Taipei"
+        },
+        "phoneNumber": [
+            {
+                "type": "office",
+                "number": "6631-6666"
+            },
+            {
+                "type": "fax",
+                "number": "6631-6598"
+            }
+        ]
+    }`;
+
+        let aaa = JSON.parse(str);
+        console.log(aaa['address']['streetAddress']);
+        //將 aaa 物件屬性 phoneNumber 當中的陣列資料（裡面是物件）逐一列出
+        for (let bbb of aaa['phoneNumber']) {
+            console.log('=============');
+            console.log(bbb['type']);
+            console.log(bbb['number']);
+        }
+        if (aaa['test']) {
+            console.log('成功');
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

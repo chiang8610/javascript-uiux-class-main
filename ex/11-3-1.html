@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let aaa = {
+            name: "Bill",
+            age: 25,
+            hairColor: 'black',
+            skinColor: 'beige'
+        };
+
+        aaa.color = true;
+
+        aaa.bg = true;
+        aaa.hb = '當然';
+
+        aaa.age = 26;
+
+        delete aaa.skinColor;
+
+        let aaajson = JSON.stringify(aaa);
+        console.log(aaajson);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
