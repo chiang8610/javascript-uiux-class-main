@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="box" style="width: 300px;height: 300px;background:rgb(21, 255, 0)" onmousemove="move()" onmouseout="out()">
+    </div>
+
+    <script>
+        function move() {
+            document.getElementById("box").style.backgroundColor = '#33ffff';
+        }
+
+        //onmouseout 事件所使用的函式
+        function out() {
+            document.getElementById("box").style.backgroundColor = '#ff000f';
+        }
+
+    </script>
+</body>
+
+</html>

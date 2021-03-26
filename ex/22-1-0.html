@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let aaa = 'cccA001'
+        let bbb = /A[0-9]+/g
+        if (bbb.test(aaa)) {
+            console.log(true);
+
+        }
+        else {
+            console.log(false);
+        }
+
+
+
+
+        let str02 = '1992, 2019, 1789, 1776, 1024, 3000, 4096, 8192';
+        let re02 = /\d{4}/g;
+        let match02 = null
+
+        if ((match02 = str02.match(re02)) != null) {
+            console.log(`哈囉:${Array.isArray(match02)}`);
+            console.log(match02);
+            for (let fff of match02) {
+                console.log(fff);
+            }
+
+        }
+
+
+        let str03 = `A0001, B0978, X9487, Y8787, Z5432`;
+        let re03 = /[A-Z][0-9]+/g;
+        let match03 = null;
+        while ((match03 = re03.exec(str03)) !== null) {
+            console.log(`==============================`);
+            console.log(match03);
+        }
+
+        let str04 = `
+    https://stickershop.line-scdn.net/stickershop/v1/sticker/384169592/iPhone/sticker_animation@2x.png, 
+    https://stickershop.line-scdn.net/stickershop/v1/sticker/384169612/iPhone/sticker_animation@2x.png, 
+    https://stickershop.line-scdn.net/stickershop/v1/sticker/384169607/iPhone/sticker_animation@2x.png,
+    https://stickershop.line-scdn.net/stickershop/v1/sticker/384169603/iPhone/sticker_animation@2x.png`;
+
+
+        //有特別誇號([0-9]+)群組才為1可以特別取出這個直
+        let re04 = /https?:\/\/stickershop\.line-scdn.net\/stickershop\/v1\/sticker\/([0-9]+)\/iPhone\/sticker_animation@2x\.png/g
+        let match04 = null;
+
+
+        //    下方一定(( 不然沒有用
+        while ((match04 = re04.exec(str04)) !== null) {
+            console.log(`=========================`);
+            console.log(match04);
+
+        }
+
+    </script>
+</body>
+
+</html>
