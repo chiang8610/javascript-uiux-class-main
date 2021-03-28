@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    </script>
+
+
+    <style>
+        #box {
+
+            width: 1000px;
+            height: 600px;
+            /* border: solid 1px red; */
+            margin: auto;
+            border-radius: 20px;
+            background-image: url(./1120.jpg);
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 30px;
+            padding-top: 30PX;
+            align-content: stretch;
+            margin-top: 30px;
+        }
+
+        h1 {
+
+
+
+            /* border: solid 1px red; */
+
+            /* line-height: 50px; */
+            font-family: 'Dancing Script', cursive;
+            margin-left: 10PX;
+
+
+            height: 50px;
+            width: 50px;
+
+            /* border: solid 1px red; */
+            font-size: 30px;
+            letter-spacing: 5px;
+
+            /* font-family: 'Dosis', sans-serif; */
+            margin: 0;
+            align-content: space-around;
+            /* margin-left: 20px; */
+
+
+        }
+
+        #styleColor {
+            color: rgb(39, 157, 212);
+
+        }
+
+        .animate__backInDown {
+            display: inline-block;
+            margin: 0 0.5rem;
+
+            animation: backInDown;
+            /* 引用動畫的 @keyframe 名稱 */
+            animation-duration: 3s;
+            /* 別忘了設定持續時間 */
+
+
+        }
+
+        .isPrime {
+            display: inline-block;
+            margin: 0 0.5rem;
+
+            animation: backInDown;
+            /* 引用動畫的 @keyframe 名稱 */
+            animation-duration: 2s;
+            /* 別忘了設定持續時間 */
+
+        }
+
+        h2 {
+            font-size: 30px;
+            letter-spacing: 5px;
+
+            font-family: 'Dancing Script', cursive;
+
+
+
+            /* line-height: 0px; */
+
+            margin: 0;
+            height: 50px;
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+
+        p {
+            /* font-family: 'Dancing Script', cursive; */
+            font-size: 15px;
+            margin-left: 135px;
+            margin-top: 230px;
+            color: rgba(0, 0, 0, 0.507);
+            letter-spacing: 10px;
+        }
+
+        .animate__flash {
+
+            animation: flash;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <div id="box">
+        <h2>1~100的質數 :</br></h2>
+        <p class="animate__animated animate__flash" id="foo">點擊後出現</p>
+    </div>
+
+
+
+
+    <script>
+        let arr = [];
+        let isPrime = true;
+
+        let box = document.getElementById('box')
+
+        var p = document.getElementById('foo');
+
+
+        box.onclick = function () {
+            p.style.display = 'none'
+            for (let aaa = 2; aaa <= 100; aaa++) {
+
+                for (let bbb = 2; bbb < aaa; bbb++) {
+
+                    if (aaa % bbb == 0) {
+                        isPrime = false;
+
+                    }
+
+                }
+
+                if (isPrime !== true) {
+                    // console.log(`${aaa}不是質數`);
+
+                    isPrime = true;
+
+                    box.innerHTML += `<h1 class="animate__animated animate__backInDown  isPrime">${aaa}</h1>`
+
+                    // arr.push(aaa);
+                }
+                else {
+
+
+                    box.innerHTML += `<h1 class="animate__animated animate__backInDown " id="styleColor">${aaa}</h1>`
+                    // arr.push(aaa);
+
+                }
+
+            }
+
+            func = box.onclick = function () { }
+        }
+
+
+
+
+
+
+        // box.innerHTML += `<div class="box1">${arr}</div>`
+
+    </script>
+
+
+</body>
+
+
+
+
+
+</html>

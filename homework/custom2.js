@@ -3284,24 +3284,64 @@ let newArr = Array.from(mySet)//(1,2,3)==>[1,2,3]
 let ul = document.getElementById('myList')
 
 
+//因為接下來只配對單一圖片連結，不用設定 //g 進行全域配對
+let re = /https?:\/\/stickershop\.line-scdn\.net\/stickershop\/v1\/sticker\/([0-9]+)\/android\/sticker\.png/
+
 for (let link of newArr) {
 
 
   //第一次搧掉重複後再抓一次沒有重複的
-  if ((match = pattern.exec(link)) !== null) {
+  if ((match = re.exec(link)) !== null) {
 
 
     let li = document.createElement('li')
     let img = document.createElement('img')
     img.setAttribute('src', match[0])
 
-    let txt = document.createTextNode(`檔案名稱:${match[1]}.png`)
+    let p = document.createElement('p')
 
+    let txt = document.createTextNode(`檔案名稱:${match[1]}.png`)
+    p.appendChild(txt)
     li.appendChild(img)
-    li.appendChild(txt)
+    li.appendChild(p)
 
     ul.appendChild(li)
 
 
   }
 }
+
+let li = document.querySelectorAll('li')
+
+li.onclick = function () {
+
+  console.log('aaa');
+  // for (var i = 0; i < li.length; i++) {
+
+
+  // }
+}
+
+
+// box.onclick = function () {
+
+//   for (var i = 0; i < div_ls.length; i++) {
+
+//     if (div_ls[i].getAttribute('id') == 'test') {
+
+//       div_ls[i].setAttribute('class', 'animate__animated animate__bounce')
+//     }
+
+//   }
+// }
+
+
+
+
+$('li').click(function () {
+  console.log('aaa');
+  $(this).css('transform', 'scale(1.2)').css('opacity', '1')
+  $(this).siblings().css('transform', 'scale(1)').css('opacity', '0.5')
+})
+
+

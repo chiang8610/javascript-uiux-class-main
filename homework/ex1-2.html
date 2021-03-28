@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <style>
+        #box {
+
+            width: 1000px;
+            height: 600px;
+            /* border: solid 1px red; */
+            margin: auto;
+            border-radius: 20px;
+            background-image: url(./1120.jpg);
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 30px;
+            padding-top: 60px;
+            /* align-content: stretch; */
+            margin-top: 30px;
+
+        }
+
+        h2 {
+            font-size: 30px;
+            letter-spacing: 5px;
+            /* line-height: 0px; */
+            font-family: 'Dosis', sans-serif;
+            margin: 0;
+            height: 50px;
+            margin-left: 20px;
+        }
+
+        h1 {
+            height: 50px;
+            width: 50px;
+
+            /* border: solid 1px red; */
+            font-size: 30px;
+            letter-spacing: 5px;
+
+            font-family: 'Dosis', sans-serif;
+            margin: 0;
+            align-content: space-around;
+            margin-left: 20px;
+
+
+        }
+
+        .animate__bounce {
+            background-image: url(./1x/1-2.png);
+            background-repeat: no-repeat;
+
+        }
+
+        p {
+            font-size: 20px;
+            margin-left: 450px;
+            margin-top: -40px;
+            color: rgba(0, 0, 0, 0.548);
+            letter-spacing: 10px;
+            position: absolute;
+
+        }
+
+        .animate__flash {
+
+            animation: flash;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+
+        }
+
+        .animate__bounce {
+
+            animation: bounce;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box">
+
+        <p class="animate__animated animate__flash">點擊後出現</p>
+
+        <h2>3、4的公倍數 :&nbsp; </h2>
+
+    </div>
+
+
+
+
+
+
+    <script>
+        let box = document.getElementById('box')
+
+
+        for (let www = 1; www <= 100; www++) {
+
+
+
+            if (www % 3 == 0 && www % 4 == 0) {
+
+
+                box.innerHTML += `<h1 id='test'>${www} </h1>`
+
+            }
+            else {
+
+
+                box.innerHTML += `<h1 >${www}</h1>`
+            }
+
+
+
+
+        }
+        let test = document.getElementById('test')
+
+        // box.onclick = function () {
+
+        //         test.style.backgroundImage = 'url(./1x/1-2.png)'
+
+        // }
+
+
+        var div_ls = document.getElementsByTagName('h1')
+
+        box.onclick = function () {
+
+            for (var i = 0; i < div_ls.length; i++) {
+
+                if (div_ls[i].getAttribute('id') == 'test') {
+
+                    div_ls[i].setAttribute('class', 'animate__animated animate__bounce')
+                }
+
+            }
+        }
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

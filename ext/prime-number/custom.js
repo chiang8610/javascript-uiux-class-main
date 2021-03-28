@@ -6,15 +6,15 @@
 let isPrime = true;
 
 //外層 for 迴圈，決定當前被除數 dividend
-for(let dividend = 2; dividend <= 100; dividend++){
+for (let dividend = 2; dividend <= 100; dividend++) {
 
     //內層 for 迴圈，決定除數 divisor
-    for(let divisor = 2; divisor < dividend; divisor++){
+    for (let divisor = 2; divisor < dividend; divisor++) {
         /**
          * 若是 dividend 除以 divisor 可以除盡，
          * 代表 dividend 不是質數
          */
-        if(dividend % divisor == 0){
+        if (dividend % divisor == 0) {
             //此時判斷 dividend 並非質數
             isPrime = false;
         }
@@ -24,7 +24,7 @@ for(let dividend = 2; dividend <= 100; dividend++){
      * 如果 dividend 被 isPrime判斷不是質數，
      * 則輸出「非質數」的文字或訊息
      */
-    if(isPrime !== true){
+    if (isPrime !== true) {
         console.log(`${dividend} != 質數`);
         document.write(`${dividend} != 質數 <br />`);
 
