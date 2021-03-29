@@ -3315,11 +3315,8 @@ let li = document.querySelectorAll('li')
 
 li.onclick = function () {
 
-  console.log('aaa');
-  // for (var i = 0; i < li.length; i++) {
+  console.log('bbb');
 
-
-  // }
 }
 
 

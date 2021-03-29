@@ -1899,7 +1899,12 @@ for (let link of newArr) {
 
   }
 }
-let li = document.querySelectorAll('img')
+
+
+
+
+
+let li = document.querySelectorAll('li')
 
 
 
@@ -1907,5 +1912,5 @@ $('li').click(function () {
   console.log('aaa');
   $(this).css('transform', 'rotateY(180deg)').css('transition', '.3s').children('img').css('opacity', '1')
 
-  $(this).siblings().css('transform', 'scale(1)').css('transition', '.6s').children('img').css('opacity', '0').css('transition', '.4s')
+  $(this).siblings().css('transform', 'scale(1)').css('transition', '.6s').children('img').css('opacity', '').css('transition', '.4s')
 })
